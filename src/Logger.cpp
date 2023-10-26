@@ -7,10 +7,10 @@ namespace PlusPlus
     Logger::Logger() = default;
     Logger::~Logger() = default;
 
-    void Logger::sendHello()
+    void Logger::sendMessage(int * message, unsigned int size)
     {
-        for(unsigned int i = 0; i < 11; ++i) {
-            std::cout << static_cast<char>(this->message[i]);
+        for(unsigned int i = 0; i < size; ++i) {
+            std::cout << static_cast<char>(chars[message[i]]);
         }
     }  
 }
